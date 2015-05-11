@@ -17,287 +17,141 @@ General
 --------------------------------------------------------------*/
 
 
-.entry-content a {
-	color: #3bbbd2;
+.green-btn{
+	background: rgba(255, 255, 255, 0.15) none repeat scroll 0% 0% !important;
+	border: 1px solid #FFF !important;
 }
-.entry-content a:visited {
-	color: #3bbbd2;
+
+.green-btn:hover{
+	background: rgba(255, 255, 255, 1) none repeat scroll 0% 0% !important;
+	color: #585858 !important;
 }
-.entry-content a:hover {
-	color: #ea4747;
+
+.custom-button {
+    display: inline-block !important;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 13px 35px;
+    border-radius: 3px;
+    margin: 10px;
+    border: medium none;
 }
 
 /*--------------------------------------------------------------
 Header
 --------------------------------------------------------------*/
 .navbar {
-	background: rgba(51,67,70, 0.9) !important;
+    background: #2b9af3 none repeat scroll 0% 0% !important;
 }
-.navbar-inverse .navbar-nav ul.sub-menu {
-	background: rgba(51,67,70, 1) !important;
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #FFF;
+    padding: 0px;
+    line-height: 35px;
 }
-.navbar-inverse .navbar-nav > li > a,
-.navbar-inverse .main-navigation > ul > li > a {
-	color: #c0cdcf !important;
+
+.header-content-wrap {
+    background: rgba(0, 0, 0, 0.6) none repeat scroll 0% 0%;
+    position: relative;
+    box-shadow: 0px 5px 11px 0px rgba(50, 50, 50, 0.08);
+    padding: 21% 0px 150px;
 }
-.focus {
-	background: #202728 !important;
-	color: #c0cdcf !important;
-}
-.focus h5 {
-	color: #FFF !important;
-}
-.focus h6 {
-	color: #c0cdcf !important;
-}
-.navbar-inverse .navbar-nav ul.sub-menu li a {
-	color: #c0cdcf !important;
-}
-.navbar-inverse .navbar-nav ul.sub-menu li:hover > a {
-	color: #3bbbd2 !important;
-}
-.navbar-inverse .navbar-nav>li>a:hover {
-	color: #3bbbd2 !important;
-}
-.nav li a.nav-active {
-	color: #3bbbd2 !important;
-}
-.nav li a.nav-active:before {
-	background: #3bbbd2 !important;
-}
-.header {
-	min-height: 0;
-}
-.header {
-	background: rgba(51,67,70, 0.5) !important;
-}
-.intro-text {
-	color: #FFF !important;
+
+.navbar-inverse .navbar-nav > li > a:hover {
+    color: #2378bc !important;
+    outline: medium none;
 }
 
 /*--------------------------------------------------------------
 Content
 --------------------------------------------------------------*/
-.dark-text {
-	color: #3bbbd2 !important;
-}
-h2.white-text {
-	color: #3bbbd2 !important;
-}
-.works {
-	background: #f5f5f5 !important;
-}
-.about-us {
-	background: #202728 !important;
-	color: #c0cdcf !important;
-}
-.red-btn {
-	border-radius: 1px;
-    border-width: 2px;
-	border-style: solid;
-    border-color: #ea4747 !important;
-    position: relative;
-    background: rgba(234,71,71,0.4) !important;
-}
-.red-btn:hover {
-    border-width: 2px;
-	border-style: solid;
-    border-color: #ea4747;
-    background: rgba(234,71,71,1) !important;
-}
-.green-btn {
-	border-radius: 1px;
-    border-width: 2px;
-	border-style: solid;
-    border-color: #3bbbd2;
-    position: relative;
-    background: rgba(59,187,210,0.4) !important;
-}
-.green-btn:hover {
-    border-width: 2px;
-	border-style: solid;
-    border-color: #3bbbd2 !important;
-    background: rgba(59,187,210,1) !important;
-}
-.intro-text {
-	background: rgba(51,67,70,0.3) !important;
-	padding: 15px 0;
-}
-.testimonial {
-	background: #3bbbd2 !important;
-}
-.feedback-box .message {
-	color: #334346 !important;
-}
-.our-team {
-	background: #f5f5f5 !important;
-}
-.textarea-box {
-	border-radius: 0;
-}
-body{
-	background: #fdfdfd;
-}
-.entry-title:before {
-	content: "";
-	background: #ea4747 !important;
-}
-.entry-title a:hover{
-	color: #ea4747 !important;
-}
-.entry-title, 
-.entry-title a, 
-.widget-title, 
-.widget-title a {
-	color: #334346;
-}
-.widget .widget-title:before, .entry-title:before {
-	content: "";
-	background: #3bbbd2 !important;
-}
-body, button, input, select, textarea {
-	color: #334346 !important;
-}
-/* Selection colours (easy to forget) */
-::selection {
-	background: #3bbbd2 !important;
-	color: #FFF !important;
-}
-::-moz-selection {
-	background: #3bbbd2 !important;
-	color: #FFF !important;
-}
-.testimonial h2 {
-	color: #FFF !important;
-}
-#client-feedbacks .feedback-box {
-	border-radius: 1px;
-}
-.input-box {
-	border-radius: 1px;
-	background: rgba(255,255,255, 1) !important;
-}
-.textarea-box {
-	border-radius: 1px;
-	background: rgba(255,255,255, 1) !important;
-}
-.newsletter {
-	background: #ea4747 !important;
-}
-.separator-one {
-	background: rgba(59, 187, 210, 0.9) !important;
-}
-.separator-one .green-btn {
-	border-radius: 1px;
-	border-width: 2px;
-	border-style: solid;
-	border-color: #ea4747;
-	position: relative;
-	background: rgba(234,71,71,0.9) !important;
-}
-.separator-one .green-btn:hover {
-	background: rgba(234,71,71,1) !important;
-}
-.purchase-now {
-	background: rgba(234, 71, 71, 0.9) !important;
-}
-.purchase-now .red-btn {
-	float: right;
-	border-radius: 1px;
-	border-width: 2px;
-	border-style: solid;
-	border-color: rgba(51,67,70, 1) !important;
-	position: relative;
-	background: rgba(51,67,70, 0.8) !important;
-}
-.purchase-now .red-btn:hover {
-	background: rgba(51,67,70, 1) !important;
-}
-.latest-news h6 {
-	color: #334346 !important;
-}
-.focus-box .service-icon {
-	border: 10px solid rgba(255, 255, 255, 0.1) !important;
-}
-.red-border-bottom:before {
-	background: #ea4747 !important;
-}
-.about-us p {
-	color: #c0cdcf !important;
-}
-.about-us .big-intro {
-	color: #FFF !important;
-	font-size: 55px;
-}
-.latest-news {
-	background: #f5f5f5 !important;
-}
-#carousel-homepage-latestnews .item .latestnews-box .latestnews-title a:before {
-	content: "";
-	background: #ea4747 !important;
-}
-.copyright {
-	background: rgba(0,0,0,0.3) !important;
+.focus {
+    padding-bottom: 100px;
+    overflow: hidden;
+    background: url("images/brickwall.png") ;
 }
 
-.comments-area input[type="text"],
-.comments-area input[type="email"],
-.comments-area input[type="url"],
-.comments-area textarea {
-	background: rgba(51,67,70, 0.8) !important;
-	color: #FFF !important;
+.about-us {
+    background: rgba(45, 45, 45, 0.95) none repeat scroll 0% 0% !important;
+    color: #FFF;
+    padding-bottom: 100px;
 }
-.comment-form #submit,
-.comment-reply-link {
-	color: #fff !important;
-	border-radius: 1px;
-	border-width: 2px;
-	border-style: solid;
-	border-color: #ea4747;
-	position: relative;
-	background: rgba(234,71,71,0.8) !important;
+
+.focus-box .service-icon {
+    width: 145px;
+    height: 145px;
+    margin: auto auto 20px;
+    border-radius: 50%;
+    border: 10px solid #E3E3E3 !important;
+    position: relative;
+    transition: all 0.2s ease-in-out 0s;
 }
-.comment-form #submit:hover,
-.comment-reply-link:hover {
-	background: rgba(234,71,71,1) !important;
+
+.our-team {
+    padding-bottom: 66px;
+    padding-top: 100px;
+    background: url("images/cream_pixels.png") ;
 }
-.widget_search input {
-	background: rgba(51,67,70, 0.8);
-	color: #FFF !important; 
+
+.testimonial {
+    background: #2b9af3 none repeat scroll 0% 0% !important;
+    padding-bottom: 90px;
 }
-.company-details {
-	color: #c0cdcf !important;
+
+.focus-box:nth-child(4n+1) .service-icon:hover {
+    border: 10px solid #BABABA !important;
 }
-.zerif-copyright-box {
-	color: #c0cdcf !important;
+
+.focus-box:nth-child(4n+2) .service-icon:hover {
+    border: 10px solid #BABABA !important;
 }
-.zerif-copyright {
-	color: #3bbbd2 !important;
+
+.focus-box:nth-child(4n+3) .service-icon:hover {
+    border: 10px solid #BABABA !important;
 }
-.zerif-copyright:hover {
-	opacity: 0.8;
+
+.focus-box:nth-child(4n+4) .service-icon:hover {
+    border: 10px solid #BABABA !important;
 }
-.our-team .row > div .red-border-bottom:before {
-	background: #ea4747 !important;
+
+.focus-box:nth-child(4n+1) .red-border-bottom:hover {
+    background: none;
 }
-.team-member .social-icons ul li a {
-	background: none;
+
+.focus-box:nth-child(4n+2) .red-border-bottom:hover {
+    background: none;
 }
-.team-member .social-icons ul li a:hover {
-	color: #3bbbd2 !important;
+
+.focus-box:nth-child(4n+3) .red-border-bottom:hover {
+    background: none;
 }
-.social-icons .widget li:before {
-	content: '';
-	display: none;
+
+.focus-box:nth-child(4n+4) .red-border-bottom:hover {
+    background: none;
 }
-.packages {
-	background: rgba(51, 67, 70, 1) !important;
+
+.dark-text {
+    color: #606366 !important;
+}
+
+.focus-box p {
+	color: #6E6E6E !important;
+}
+
+.green-bg {
+	background: #2b9af3 !important;
+}
+
+article.hentry {
+    float: left;
+    width: 100%;
+    margin-bottom: 30px;
+    border: 1px solid #E7E7E7 !important;
+    padding: 15px;
+    background-color: #F9F9F9 !important;
 }
 
 
 /*--------------------------------------------------------------
 Footer
 --------------------------------------------------------------*/
-#footer {
-	background: #334346 !important;
-}
