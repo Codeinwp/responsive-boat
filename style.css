@@ -36,6 +36,18 @@ General
     margin: 10px;
     border: medium none;
 }
+.section-header h2 {
+    padding-bottom: 10px;
+    line-height: 40px;
+    position: relative;
+    display: inline-block;
+    font-size: 45px;
+    text-transform: uppercase;
+}
+
+p {
+    font-family: 'Lato', sans-serif !important;
+}
 
 /*--------------------------------------------------------------
 Header
@@ -45,7 +57,7 @@ Header
 }
 
 .navbar-inverse .navbar-nav > li > a {
-    color: #FFF;
+    color: #FFF !important;
     padding: 0px;
     line-height: 35px;
 }
@@ -62,6 +74,39 @@ Header
     outline: medium none;
 }
 
+nav  li + li {
+    background:url('images/lists-dot.png') no-repeat 0px 14px;
+    padding-left: 20px
+}
+
+.status {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-image: url(images/load.gif) !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: -100px 0 0 -100px;
+}
+
+#loader .loader-icon {
+    background: url(images/load.gif) no-repeat center center !important;
+    background-color: #FFF;
+    margin: -22px -22px;
+    top: 50%;
+    left: 50%;
+    z-index: 10000;
+    position: fixed;
+    width: 44px;
+    height: 44px;
+    -webkit-background-size: 30px 30px;
+    background-size: 30px 30px;
+    border-radius: 5px;
+}
+
+
 /*--------------------------------------------------------------
 Content
 --------------------------------------------------------------*/
@@ -73,7 +118,7 @@ Content
 
 .about-us {
     background: rgba(45, 45, 45, 0.95) none repeat scroll 0% 0% !important;
-    color: #FFF;
+    color: #FFF !important;
     padding-bottom: 100px;
 }
 
@@ -90,12 +135,47 @@ Content
 .our-team {
     padding-bottom: 66px;
     padding-top: 100px;
-    background: url("images/cream_pixels.png") ;
+    background: url("images/subtle_dots.png") ;
 }
 
 .testimonial {
     background: #2b9af3 none repeat scroll 0% 0% !important;
     padding-bottom: 90px;
+}
+
+.latest-news {
+    padding-bottom: 66px;
+    padding-top: 100px;
+    background: url("images/brickwall.png") ;
+}
+
+.site-content {
+    background: url("images/brickwall.png") ;
+}
+
+.latest-news > .container {
+    background-color: white !important;
+    border: 1px solid rgb(203, 203, 203);
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.contact-us {
+    background: rgba(80, 80, 80, 0.9) none repeat scroll 0% 0%;
+    padding-bottom: 95px;
+}
+
+.team-member:hover .details {
+    top: 0px;
+    background: #0E3351 none repeat scroll 0% 0% !important;
+    color: #FFF;
+    opacity: 1;
+}
+
+input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], textarea {
+    color: #5A5A5A ;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0px;
 }
 
 .focus-box:nth-child(4n+1) .service-icon:hover {
@@ -136,6 +216,19 @@ Content
 
 .focus-box p {
 	color: #6E6E6E !important;
+       font-family: "Oxygen", sans-serif !important;
+}
+
+.focus-box h5 {
+    color: #7A7A7A !important;
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-size: 17px;
+    float: none;
+    width: auto;
 }
 
 .green-bg {
@@ -146,12 +239,113 @@ article.hentry {
     float: left;
     width: 100%;
     margin-bottom: 30px;
-    border: 1px solid #E7E7E7 !important;
+    border: 1px solid #DEDEDE;
     padding: 15px;
-    background-color: #F9F9F9 !important;
+    background-color: #FFF !important;
 }
+
+.large-container {
+    background-color: #FFF !important;
+    border-radius: 4px;
+    margin: 35px 0px;
+    position: relative;
+    width: 97%;
+    margin-top: 0;
+}
+
+#primary{
+    margin-top: -60px;
+}
+
+.listpost-content-wrap .entry-content p {
+    min-height: 90px;
+    margin-bottom: 0px;
+    font-family: "Oxygen", sans-serif !important;
+    margin-right: 10px;
+}
+
+.content-left-wrap {
+    padding-top: 60px;
+}
+
+.carousel-control.left {
+    margin-left: -35px;
+}
+
+.listpost-content-wrap-large {
+    position: absolute;
+    bottom: 0px;
+    background: rgba(255, 255, 255, 0.98) none repeat scroll 0% 0%;
+    min-height: 50px;
+    width: 100%;
+    padding: 20px 20px 0px;
+    border-top: 2px solid #FFF;
+    border: 1px solid #DEDEDE;
+}
+
+.our-team .row > div:nth-child(4n+1) .red-border-bottom::before {
+    background: #FC6D6D none repeat scroll 0% 0%;
+}
+
+.our-team .row > div:nth-child(4n+2) .red-border-bottom::before {
+    background: #FC6D6D none repeat scroll 0% 0%;
+}
+
+.our-team .row > div:nth-child(4n+3) .red-border-bottom::before {
+    background: #FC6D6D none repeat scroll 0% 0%;
+}
+
+.our-team .row > div:nth-child(4n+4) .red-border-bottom::before {
+    background: #FC6D6D none repeat scroll 0% 0%;
+}
+
+#carousel-homepage-latestnews .item .latestnews-box:nth-child(4n+1) .latestnews-title a::before {
+    background: #FC6D6D none repeat scroll 0% 0%;
+}
+
+#carousel-homepage-latestnews .item .latestnews-box:nth-child(4n+2) .latestnews-title a::before {
+    background: #FC6D6D none repeat scroll 0% 0%;
+}
+
+#carousel-homepage-latestnews .item .latestnews-box:nth-child(4n+3) .latestnews-title a::before {
+    background: #FC6D6D none repeat scroll 0% 0%;
+}
+
+#carousel-homepage-latestnews .item .latestnews-box:nth-child(4n+4) .latestnews-title a::before {
+    background: #FC6D6D none repeat scroll 0% 0%;
+}
+
+
 
 
 /*--------------------------------------------------------------
 Footer
 --------------------------------------------------------------*/
+#footer {
+    background: rgba(39, 39, 39, 0.95) none repeat scroll 0% 0%;
+}
+
+.entry-footer a {
+    color: #B36A6A !important;
+    font-style: italic;
+}
+
+
+/*--------------------------------------------------------------
+Responsive
+--------------------------------------------------------------*/
+
+@media screen and (max-width: 780px){
+    .navbar-inverse .navbar-nav > li > a {
+    color: #FFF !important;
+    padding: 0px;
+    line-height: 35px;
+    margin-left: 15px;
+    }
+}
+
+
+/*--------------------------------------------------------------
+Fonts
+--------------------------------------------------------------*/
+<link href='//fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
