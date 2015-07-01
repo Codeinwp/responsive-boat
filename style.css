@@ -1,10 +1,10 @@
 /*
  Theme Name:   ResponsiveBoat
- Description:  ResponsiveBOAT is a free responsive Wordpress theme, with a friendly and colorful design. It comes with a full-screen layout, a full-width homepage header, elegant parallax effect, and nice animations. It can be used web agencies, digital studios, corporate, product showcase, personal and business portfolio. Overall, ResponsiveBOAT looks very modern and interactive.
+ Description:  ResponsiveBoat is a free responsive WordPress theme, with a friendly and colorful design. It comes with a full-screen layout, a full-width homepage header, elegant parallax effect, and nice animations. It can be used web agencies, digital studios, corporate, product showcase, personal and business portfolio. Overall, ResponsiveBoat looks very modern and interactive.
  Author:       Themeisle
  Author URI:   https://themeisle.com
  Template:     zerif-lite
- Version:      1.0.0
+ Version:      1.0.1
  License:      GNU General Public License version 2
  License URI:  license.txt
  Text Domain:  responsiveboat
@@ -153,11 +153,14 @@ Content
     background: url("images/brickwall.png") ;
 }
 
-.latest-news > .container {
-    background-color: white !important;
-    border: 1px solid rgb(203, 203, 203);
-    border-radius: 4px;
-    padding: 5px;
+.latest-news .latestnews-box .latestnews-img {
+	background: #ffffff;
+	padding: 35px;
+}
+.latest-news .latestnews-box .latesnews-content {
+	background: #ffffff;
+	padding: 0px 35px 35px 35px;
+	min-height: 372px;
 }
 
 .contact-us {
@@ -314,9 +317,45 @@ article.hentry {
 #carousel-homepage-latestnews .item .latestnews-box:nth-child(4n+4) .latestnews-title a::before {
     background: #FC6D6D none repeat scroll 0% 0%;
 }
+#carousel-homepage-latestnews .carousel-control {
+	
+}
+.latest-news-controls {
+	height: 50px; 
+	display:block;
+	background: #fff;
+}
+.carousel-control.left {
+	margin-left: 25px;
+}
 
+.carousel-control.right {
+	margin-right: 25px;
+}
+#carousel-homepage-latestnews {
+	margin:0px;
+}
 
+.about-us .skills {
+	text-align:center;
+}
+.about-us .skills .skill {
+	display: inline-block;
+	margin-top: 0;
+	margin-bottom: 0px;
+	padding-right: 30px;
+}
 
+.about-us .skills .skill .skill-count {
+	display:block;
+	float:none;
+	margin-right: 0px;
+	margin-bottom: 10px;
+}
+
+.about-us .skills-div  {
+	margin-bottom: 20px;
+}
 
 /*--------------------------------------------------------------
 Footer
@@ -343,9 +382,3 @@ Responsive
     margin-left: 15px;
     }
 }
-
-
-/*--------------------------------------------------------------
-Fonts
---------------------------------------------------------------*/
-<link href='//fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
