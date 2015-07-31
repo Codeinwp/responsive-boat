@@ -16,15 +16,14 @@
 General
 --------------------------------------------------------------*/
 
-
-.green-btn{
-	background: rgba(255, 255, 255, 0.15) none repeat scroll 0% 0% !important;
-	border: 1px solid #FFF !important;
+.green-btn, .red-btn {
+	background: rgba(255, 255, 255, 0.15);
+	border: 1px solid #FFDD00 !important;
 }
 
-.green-btn:hover{
-	background: rgba(255, 255, 255, 1) none repeat scroll 0% 0% !important;
-	color: #585858 !important;
+.green-btn:hover, .red-btn:hover {
+	background: #FFDD00;
+    border: 1px solid #FFDD00 !important;
 }
 
 .custom-button {
@@ -52,31 +51,39 @@ p {
 /*--------------------------------------------------------------
 Header
 --------------------------------------------------------------*/
+
 .navbar {
-    background: #2b9af3 none repeat scroll 0% 0% !important;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.8)), color-stop(50%, rgba(0,0,0,0.5)), to(rgba(0,0,0,0)));
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0) 100%);
+    background: linear-gradient(to bottom,rgba(0,0,0,0.8)0%,rgba(0,0,0,0.5) 50%,rgba(0,0,0,0) 100%);
 }
 
 .navbar-inverse .navbar-nav > li > a {
-    color: #FFF !important;
-    padding: 0px;
-    line-height: 35px;
+    font-size: 12px;
+    font-family: "Montserrat", "sans-serif";
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.rb_logo {
+    padding-bottom: 190px;
+}
+
+.header.header > .navbar {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
 }
 
 .header-content-wrap {
     background: rgba(0, 0, 0, 0.6) none repeat scroll 0% 0%;
     position: relative;
     box-shadow: 0px 5px 11px 0px rgba(50, 50, 50, 0.08);
-    padding: 21% 0px 150px;
+    padding: 10% 0px 290px;
 }
 
 .navbar-inverse .navbar-nav > li > a:hover {
-    color: #2378bc !important;
-    outline: medium none;
-}
-
-nav  li + li {
-    background:url('images/lists-dot.png') no-repeat 0px 14px;
-    padding-left: 20px
+    color: #fd0 !important;
 }
 
 .status {

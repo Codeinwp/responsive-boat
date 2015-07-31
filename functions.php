@@ -22,9 +22,6 @@ function responsiveboat_custom_script_fix() {
 		wp_enqueue_style( 'responsiveboat-script-mobile', get_template_directory_uri() . '/css/zerif_mobile.css' );
 
 	}
-	
-	wp_enqueue_script('responsiveboat-nicescroll',get_stylesheet_directory_uri().'/js/jquery.nicescroll.js',array('jquery'),'12121',true);
-    wp_enqueue_script('responsiveboat-nicescroll-script',get_stylesheet_directory_uri().'/js/zerif-nicescroll.js',array('jquery','responsiveboat-nicescroll'),'12121',true);	
 }
 
 add_action( 'wp_enqueue_scripts', 'responsiveboat_custom_script_fix' );

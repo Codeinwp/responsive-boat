@@ -5,7 +5,7 @@
 	License: All unsplash.com images are licensed under the terms of the Creative Commons Zero, http://creativecommons.org/publicdomain/zero/1.0/ 	  
 	 
 		 * images/bg.jpg
-			Source: https://download.unsplash.com/31/8jLdwLg6TLKIQfJcZgDb_Freedom_5.jpg
+			Source: https://download.unsplash.com/photo-1430834500855-3873f1e078f5
 
 		 * images/testimonial1.jpg
 			Source: https://download.unsplash.com/7/girl-flowers.jpg

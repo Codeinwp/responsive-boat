@@ -286,7 +286,7 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 
 	if( isset($zerif_bigtitle_show) && $zerif_bigtitle_show != 1 ):
 
-		include get_template_directory() . "/sections/big_title.php";
+		include get_stylesheet_directory() . "/sections/big_title.php";
 	endif;
 
 
