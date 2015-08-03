@@ -56,7 +56,7 @@ if( !empty($zerif_total_posts) && ($zerif_total_posts > 0) ):
                             if ( has_post_thumbnail() ) :
                                 the_post_thumbnail('rb_latest_news_photo');
                             else:
-                                echo zerif_get_first_image_from_post();
+                                echo responsive_boat_get_first_image_from_post();
                             endif;
 
                         echo '</span>';
