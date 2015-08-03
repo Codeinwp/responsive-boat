@@ -286,7 +286,7 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 
 	if( isset($zerif_bigtitle_show) && $zerif_bigtitle_show != 1 ):
 
-		include get_template_directory() . "/sections/big_title.php";
+		include get_stylesheet_directory() . "/sections/big_title.php";
 	endif;
 
 
@@ -317,18 +317,13 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 	include get_template_directory() . "/sections/ribbon_with_bottom_button.php";
 
 
+	/* ABOUT YOU */
 
+	$rb_aboutyou_show = get_theme_mod('rb_aboutyou_show');
 
+	if( isset($rb_aboutyou_show) && $rb_aboutyou_show != 1 ):
 
-
-
-	/* ABOUT US */
-
-	$zerif_aboutus_show = get_theme_mod('zerif_aboutus_show');
-
-	if( isset($zerif_aboutus_show) && $zerif_aboutus_show != 1 ):
-
-		include get_stylesheet_directory() . "/sections/about_us.php";
+		include get_stylesheet_directory() . "/sections/about_you.php";
 	endif;
 
 
@@ -446,36 +441,42 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 
 						<input type="hidden" name="submitted" id="submitted" value="true" />
 
-						<div class="col-lg-4 col-sm-4" data-scrollreveal="enter left after 0s over 1s">
+						<div class="col-lg-6 col-sm-6" data-scrollreveal="enter left after 0s over 1s">
 
-							<input required="required" type="text" name="myname" placeholder="Your Name" class="form-control input-box" value="<?php if(isset($_POST['myname'])) echo esc_attr($_POST['myname']);?>">
+							<div class="col-lg-12 col-sm-12" data-scrollreveal="enter left after 0s over 1s">
+
+								<input required="required" type="text" name="myname" placeholder="Your Name" class="form-control input-box" value="<?php if(isset($_POST['myname'])) echo esc_attr($_POST['myname']);?>">
+
+							</div>
+
+							<div class="col-lg-12 col-sm-12" data-scrollreveal="enter left after 0s over 1s">
+
+								<input required="required" type="email" name="myemail" placeholder="Your Email" class="form-control input-box" value="<?php if(isset($_POST['myemail'])) echo is_email($_POST['myemail']) ? $_POST['myemail'] : ""; ?>">
+
+							</div>
+
+							<div class="col-lg-12 col-sm-12" data-scrollreveal="enter left after 0s over 1s">
+
+								<input required="required" type="text" name="mysubject" placeholder="Subject" class="form-control input-box" value="<?php if(isset($_POST['mysubject'])) echo esc_attr($_POST['mysubject']);?>">
+
+							</div>
+
+							<?php
+							$zerif_contactus_button_label = get_theme_mod('zerif_contactus_button_label','Send Message');
+							if( !empty($zerif_contactus_button_label) ):
+								echo '<button class="btn btn-primary custom-button red-btn" type="submit" data-scrollreveal="enter left after 0s over 1s">'.$zerif_contactus_button_label.'</button>';
+							endif;
+							?>
 
 						</div>
 
-						<div class="col-lg-4 col-sm-4" data-scrollreveal="enter left after 0s over 1s">
-
-							<input required="required" type="email" name="myemail" placeholder="Your Email" class="form-control input-box" value="<?php if(isset($_POST['myemail'])) echo is_email($_POST['myemail']) ? $_POST['myemail'] : ""; ?>">
-
-						</div>
-
-						<div class="col-lg-4 col-sm-4" data-scrollreveal="enter left after 0s over 1s">
-
-							<input required="required" type="text" name="mysubject" placeholder="Subject" class="form-control input-box" value="<?php if(isset($_POST['mysubject'])) echo esc_attr($_POST['mysubject']);?>">
-
-						</div>
-
-						<div class="col-lg-12 col-sm-12" data-scrollreveal="enter right after 0s over 1s">
+						<div class="col-lg-6 col-sm-6" data-scrollreveal="enter right after 0s over 1s">
 
 							<textarea name="mymessage" class="form-control textarea-box" placeholder="Your Message"><?php if(isset($_POST['mymessage'])) { echo esc_html($_POST['mymessage']); } ?></textarea>
 
 						</div>
 	
-						<?php
-							$zerif_contactus_button_label = get_theme_mod('zerif_contactus_button_label','Send Message');
-							if( !empty($zerif_contactus_button_label) ):
-								echo '<button class="btn btn-primary custom-button red-btn" type="submit" data-scrollreveal="enter left after 0s over 1s">'.$zerif_contactus_button_label.'</button>';
-							endif;
-						?>
+
 						
 						<?php 
 
