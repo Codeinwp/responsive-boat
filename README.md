@@ -14,4 +14,7 @@
 			Source: https://download.unsplash.com/photo-1427096105551-15e2512fd2dc
 		  
 		 * images/testimonial3.jpg
-			Source: https://download.unsplash.com/photo-1428471226620-c2698eadf413	
+			Source: https://download.unsplash.com/photo-1428471226620-c2698eadf413
+
+		 * images/about.jpg
+		 	Source: https://download.unsplash.com/photo-1431910246269-dc9202bc8a88
