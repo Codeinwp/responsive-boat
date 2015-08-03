@@ -48,7 +48,7 @@ function responsiveboat_remove_style_child(){
 add_action( 'wp_enqueue_scripts', 'responsiveboat_remove_style_child', 100 );
 
 /* get first image from a post content or get a default image */
-function zerif_get_first_image_from_post() {
+function responsive_boat_get_first_image_from_post() {
 
 	global $post, $posts;
 	

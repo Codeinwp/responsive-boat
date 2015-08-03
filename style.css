@@ -272,7 +272,6 @@ Footer
     animation: rb-animatedBackground 1s ease-out 1;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
-
 }
 
 .rb-latest-news-image:hover img {
