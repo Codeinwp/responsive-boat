@@ -9,7 +9,7 @@ echo '<div class="container">';
 
         $rb_bigtitle_logo = get_theme_mod('rb_bigtitle_logo');
 
-         if(isset($rb_bigtitle_logo) && $zerif_logo != ""):
+         if(isset($rb_bigtitle_logo) && $rb_bigtitle_logo != ""):
 
              echo '<a href="'.esc_url( home_url( '/' ) ).'" class="">';
 
