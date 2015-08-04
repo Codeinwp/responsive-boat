@@ -21,11 +21,22 @@ function responsive_boat_customize_register( $wp_customize ) {
     $wp_customize->remove_section('zerif_aboutus_clients_section');
 
     /**************************************/
+    /********** Big title image **********/
+    /*************************************/
+    $wp_customize->add_setting( 'rb_bigtitle_logo', array('sanitize_callback' => 'esc_url_raw' , 'default' => get_stylesheet_directory_uri().'/images/logo-small.png'));
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'rb_bigtitle_logo', array(
+        'label'    => __( 'Header Logo', 'responsiveboat' ),
+        'section'  => 'zerif_bigtitle_section',
+        'priority'    => 7,
+    )));
+
+
+    /**************************************/
     /********   About me section *********/
     /*************************************/
 
     $wp_customize->add_section( 'rb_aboutyou_section' , array(
-        'title'       => __( 'About you section', 'responsive-boat' ),
+        'title'       => __( 'About you section', 'responsiveboat' ),
         'priority'    => 34
     ));
 
@@ -35,32 +46,32 @@ function responsive_boat_customize_register( $wp_customize ) {
         'rb_aboutyou_show',
         array(
             'type' => 'checkbox',
-            'label' => __('Hide about you section?','responsive-boat'),
+            'label' => __('Hide about you section?','responsiveboat'),
             'section' => 'rb_aboutyou_section',
             'priority'    => 1,
         )
     );
 
     /* title */
-    $wp_customize->add_setting( 'rb_aboutyou_title', array('sanitize_callback' => 'responsive_boat_sanitize_text','default' => __('About you','responsive-boat')));
+    $wp_customize->add_setting( 'rb_aboutyou_title', array('sanitize_callback' => 'responsive_boat_sanitize_text','default' => __('About you','responsiveboat')));
     $wp_customize->add_control( 'rb_aboutyou_title', array(
-        'label'    => __( 'Title', 'responsive-boat' ),
+        'label'    => __( 'Title', 'responsiveboat' ),
         'section'  => 'rb_aboutyou_section',
         'priority'    => 2,
     ));
 
     /* subtitle */
-    $wp_customize->add_setting( 'rb_aboutyou_subtitle', array('sanitize_callback' => 'responsive_boat_sanitize_text','default' => __('Use this section to showcase important details about you.','responsive-boat')));
+    $wp_customize->add_setting( 'rb_aboutyou_subtitle', array('sanitize_callback' => 'responsive_boat_sanitize_text','default' => __('Use this section to showcase important details about you.','responsiveboat')));
     $wp_customize->add_control( 'rb_aboutyou_subtitle', array(
-        'label'    => __( 'Subtitle', 'responsive-boat' ),
+        'label'    => __( 'Subtitle', 'responsiveboat' ),
         'section'  => 'rb_aboutyou_section',
         'priority'    => 3,
     ));
 
     /* text */
-    $wp_customize->add_setting( 'rb_aboutyou_text', array('sanitize_callback' => 'responsive_boat_sanitize_text','default' => __('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec massa enim. Aliquam viverra at est ullamcorper sollicitudin. Proin a leo sit amet nunc malesuada imperdiet pharetra ut eros.<br><br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec massa enim. Aliquam viverra at est ullamcorper sollicitudin. Proin a leo sit amet nunc malesuada imperdiet pharetra ut eros. <br><br>Mauris vel nunc at ipsum fermentum pellentesque quis ut massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas non adipiscing massa. Sed ut fringilla sapien. Cras sollicitudin, lectus sed tincidunt cursus, magna lectus vehicula augue, a lobortis dui orci et est.','responsive-boat')));
+    $wp_customize->add_setting( 'rb_aboutyou_text', array('sanitize_callback' => 'responsive_boat_sanitize_text','default' => __('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec massa enim. Aliquam viverra at est ullamcorper sollicitudin. Proin a leo sit amet nunc malesuada imperdiet pharetra ut eros.<br><br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec massa enim. Aliquam viverra at est ullamcorper sollicitudin. Proin a leo sit amet nunc malesuada imperdiet pharetra ut eros. <br><br>Mauris vel nunc at ipsum fermentum pellentesque quis ut massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas non adipiscing massa. Sed ut fringilla sapien. Cras sollicitudin, lectus sed tincidunt cursus, magna lectus vehicula augue, a lobortis dui orci et est.','responsiveboat')));
     $wp_customize->add_control( 'rb_aboutyou_text', array(
-        'label'    => __( 'Text', 'responsive-boat' ),
+        'label'    => __( 'Text', 'responsiveboat' ),
         'section'  => 'rb_aboutyou_section',
         'priority'    => 4,
     ));
@@ -68,7 +79,7 @@ function responsive_boat_customize_register( $wp_customize ) {
     /* image */
     $wp_customize->add_setting( 'rb_aboutyou_image', array('sanitize_callback' => 'esc_url_raw' , 'default' => get_stylesheet_directory_uri().'/images/about.jpg'));
     $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'rb_aboutyou_image', array(
-        'label'    => __( 'Image', 'responsive-boat' ),
+        'label'    => __( 'Image', 'responsiveboat' ),
         'section'  => 'rb_aboutyou_section',
         'priority'    => 5,
     )));

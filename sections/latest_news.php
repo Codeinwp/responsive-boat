@@ -69,7 +69,7 @@ if( !empty($zerif_total_posts) && ($zerif_total_posts > 0) ):
                     echo '<div class="rb-latest-news-content-outer">';
                         echo '<div class="rb-latest-news-content-inner">';
                             echo '<h3>'.get_the_title().'</h3>';
-                            echo '<a href="'.get_permalink().'" class="rb-latest-news-read-more">'.__('Read full article','responsive-boat').'</a>';
+                            echo '<a href="'.get_permalink().'" class="rb-latest-news-read-more">'.__('Read full article','responsiveboat').'</a>';
                         echo '</div>';
                     echo '</div>';
                 echo '</span>';

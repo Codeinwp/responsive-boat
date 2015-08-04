@@ -343,7 +343,7 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 
 	if( isset($zerif_testimonials_show) && $zerif_testimonials_show != 1 ):
 
-		include get_template_directory() . "/sections/testimonials.php";
+		include get_stylesheet_directory() . "/sections/testimonials.php";
 	endif;
 
 

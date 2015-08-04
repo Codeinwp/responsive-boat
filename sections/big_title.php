@@ -7,13 +7,13 @@ echo '<div class="container">';
 
          $zerif_bigtitle_title = get_theme_mod('zerif_bigtitle_title',__('ONE OF THE TOP 10 MOST POPULAR THEMES ON WORDPRESS.ORG','zerif-lite'));
 
-         $zerif_logo = get_theme_mod('zerif_logo');
+        $rb_bigtitle_logo = get_theme_mod('rb_bigtitle_logo');
 
-         if(isset($zerif_logo) && $zerif_logo != ""):
+         if(isset($rb_bigtitle_logo) && $zerif_logo != ""):
 
              echo '<a href="'.esc_url( home_url( '/' ) ).'" class="">';
 
-                echo '<img src="'.$zerif_logo.'" alt="'.get_bloginfo('title').'" class="rb_logo">';
+                echo '<img src="'.$rb_bigtitle_logo.'" alt="'.get_bloginfo('title').'" class="rb_logo">';
 
              echo '</a>';
 
@@ -23,11 +23,11 @@ echo '<div class="container">';
 
                     if( file_exists(get_stylesheet_directory()."/images/logo.png")):
 
-                        echo '<img src="'.get_stylesheet_directory_uri().'/images/logo.png" alt="'.get_bloginfo('title').'" class="rb_logo">';
+                        echo '<img src="'.get_stylesheet_directory_uri().'/images/logo-small.png" alt="'.get_bloginfo('title').'" class="rb_logo">';
 
                     else:
 
-                        echo '<img src="'.get_template_directory_uri().'/images/logo.png" alt="'.get_bloginfo('title').'" class="rb_logo">';
+                        echo '<img src="'.get_template_directory_uri().'/images/logo-small.png" alt="'.get_bloginfo('title').'" class="rb_logo">';
 
                     endif;
 
