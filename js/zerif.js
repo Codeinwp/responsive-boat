@@ -1,1 +1,0 @@
-jQuery( document ).ready(function(){		var headerHight = jQuery('#main-nav').height();	jQuery('.content-left-wrap').css('margin-top',headerHight+30);	});jQuery( document ).ready(function(){		  jQuery("#menu-toggle-search").on("click",function(e) {             jQuery(".header-search").toggleClass("toggled");		return false;    });	});

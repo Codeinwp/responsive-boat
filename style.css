@@ -15,7 +15,6 @@
 /*--------------------------------------------------------------
 General
 --------------------------------------------------------------*/
-
 .green-btn, .red-btn {
 	background: rgba(255, 255, 255, 0.15);
 	border: 1px solid #FFDD00 !important;
@@ -51,6 +50,10 @@ General
     margin-right: auto;
 }
 
+.testimonial .section-header h2:after {
+    background: #404040;
+}
+
 .section-header h6 {
     color: #303030;
     font-weight: bold;
@@ -69,6 +72,12 @@ Header
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.8)), color-stop(50%, rgba(0,0,0,0.5)), to(rgba(0,0,0,0)));
     background: -webkit-linear-gradient(top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0) 100%);
     background: linear-gradient(to bottom,rgba(0,0,0,0.8)0%,rgba(0,0,0,0.5) 50%,rgba(0,0,0,0) 100%);
+}
+
+.navbar-black {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.8)), color-stop(50%, rgba(0,0,0,0.5)), to(rgba(0,0,0,0)));
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0) 100%);
+    background: linear-gradient(to bottom,rgba(0,0,0,0.8)0%,rgba(0,0,0,0.7) 50%,rgba(0,0,0,0.5) 100%);
 }
 
 #site-navigation {
@@ -128,7 +137,7 @@ Content
 }
 
 .testimonial {
-    background: rgba(45, 45, 45, 0.95) none repeat scroll 0% 0% !important;
+    background: rgba(255, 221, 0, 0.7) none repeat scroll 0% 0% !important;
 }
 
 .contact-us {
@@ -227,6 +236,20 @@ article.hentry {
     padding: 20px 20px 0px;
     border-top: 2px solid #FFF;
     border: 1px solid #DEDEDE;
+}
+
+#client-feedbacks .feedback-box {
+    background: #000;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    color: #fff !important;
+}
+.feedback-box .message {
+    color: #fff;
+}
+.feedback-box .client-info .client-name {
+    color: #fff;
 }
 
 /*--------------------------------------------------------------
@@ -446,15 +469,64 @@ Footer
     float: right;
     padding-right: 15px;
 }
+
+.rb-navbar-brand {
+    padding-top: 10px;
+}
+
+.navbar-black .navbar-inverse .navbar-nav {
+    padding-top: 0px;
+}
+
+.navbar-toggle.active {
+    background-color: #FD0 !important;
+}
+
+.navbar-inverse .navbar-toggle.active .icon-bar {
+    background-color: #000 !important;
+}
+.rb-fixed {
+    margin-top: 32px;
+}
+
 /*--------------------------------------------------------------
 Responsive
 --------------------------------------------------------------*/
 
-@media screen and (max-width: 780px){
-    .navbar-inverse .navbar-nav > li > a {
-    color: #FFF !important;
-    padding: 0px;
-    line-height: 35px;
-    margin-left: 15px;
+@media screen and (max-width: 1170px){
+    .rb-latest-news {
+        width: 33.3%;
+    }
+}
+
+@media screen and (max-width: 992px){
+    .rb-latest-news {
+        width: 50%;
+    }
+    .about-us p {
+        text-align: center;
+    }
+    .focus-box .service-icon {
+        width: 180px;
+        height: 180px;
+    }
+
+}
+
+@media screen and (max-width: 767px){
+    #main-nav, #main-nav.fixed {
+        background: rgba(0, 0, 0, 0.8) none repeat scroll 0% 0%;
+    }
+    .dropdownmenu {
+        background: url(images/menu-icon.png) center center no-repeat #FD0;
+    }
+    .navbar a{
+        color: #fff !important;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .rb-latest-news {
+        width: 100%;
     }
 }

@@ -78,7 +78,11 @@ endif; ?>
 
 <header id="home" class="header">
 
-    <div id="main-nav" class="navbar navbar-inverse bs-docs-nav" role="banner">
+    <?php if(is_front_page()): ?>
+        <div id="main-nav" class="navbar navbar-inverse bs-docs-nav" role="banner">
+    <?php else: ?>
+        <div id="main-nav" class="navbar-black navbar-inverse bs-docs-nav" role="banner">
+    <?php endif; ?>
 
         <div class="container">
 
@@ -102,23 +106,39 @@ endif; ?>
 
                 if(isset($zerif_logo) && $zerif_logo != ""):
 
-                echo '<a href="'.esc_url( home_url( '/' ) ).'" class="navbar-brand rb-hidden-logo">';
+                    if( is_front_page() ):
 
-                    echo '<img src="'.$zerif_logo.'" alt="'.get_bloginfo('title').'" >';
+                        echo '<a href="'.esc_url( home_url( '/' ) ).'" class="rb-navbar-brand rb-hidden-logo">';
+
+                    else:
+
+                        echo '<a href="'.esc_url( home_url( '/' ) ).'" class="rb-navbar-brand">';
+
+                    endif;
+
+                        echo '<img src="'.$zerif_logo.'" alt="'.get_bloginfo('title').'" >';
 
                     echo '</a>';
 
                 else:
 
-                echo '<a href="'.esc_url( home_url( '/' ) ).'" class="navbar-brand rb-hidden-logo">';
+                    if( is_front_page() ):
 
-                    if( file_exists(get_stylesheet_directory()."/images/logo.png")):
-
-                    echo '<img src="'.get_stylesheet_directory_uri().'/images/logo.png" alt="'.get_bloginfo('title').'">';
+                        echo '<a href="'.esc_url( home_url( '/' ) ).'" class="rb-navbar-brand rb-hidden-logo">';
 
                     else:
 
-                    echo '<img src="'.get_template_directory_uri().'/images/logo.png" alt="'.get_bloginfo('title').'">';
+                        echo '<a href="'.esc_url( home_url( '/' ) ).'" class="rb-navbar-brand">';
+
+                    endif;
+
+                    if( file_exists(get_stylesheet_directory()."/images/logo.png")):
+
+                        echo '<img src="'.get_stylesheet_directory_uri().'/images/logo.png" alt="'.get_bloginfo('title').'">';
+
+                    else:
+
+                        echo '<img src="'.get_template_directory_uri().'/images/logo.png" alt="'.get_bloginfo('title').'">';
 
                     endif;
 
