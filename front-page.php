@@ -381,12 +381,12 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 					
 						$zerif_contactus_title = get_theme_mod('zerif_contactus_title','Get in touch');
 						if ( !empty($zerif_contactus_title) ):
-							echo '<h2 class="white-text">'.$zerif_contactus_title.'</h2>';
+							echo '<h2 class="white-text">'.esc_attr( $zerif_contactus_title ).'</h2>';
 						endif;
 					
 						$zerif_contactus_subtitle = get_theme_mod('zerif_contactus_subtitle');
 						if(isset($zerif_contactus_subtitle) && $zerif_contactus_subtitle != ""):
-							echo '<h6 class="white-text">'.$zerif_contactus_subtitle.'</h6>';
+							echo '<h6 class="white-text">'.esc_attr( $zerif_contactus_subtitle ).'</h6>';
 						endif;
 					?>
 				</div>

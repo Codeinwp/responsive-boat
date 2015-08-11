@@ -10,11 +10,11 @@ echo '<div class="container">';
 echo '<div class="section-header">';
 
 
-$zerif_testimonials_title = get_theme_mod('zerif_testimonials_title',__('Testimonials','zerif-lite'));
+$zerif_testimonials_title = get_theme_mod('zerif_testimonials_title',__('Testimonials','responsiveboat'));
 
 if( !empty($zerif_testimonials_title) ):
 
-    echo '<h2 class="black-text">'.__($zerif_testimonials_title,'zerif-lite').'</h2>';
+    echo '<h2 class="black-text">'.esc_attr( $zerif_testimonials_title ).'</h2>';
 
 endif;
 
@@ -25,7 +25,7 @@ $zerif_testimonials_subtitle = get_theme_mod('zerif_testimonials_subtitle');
 if( !empty($zerif_testimonials_subtitle) ):
 
 
-    echo '<h6 class="black-text">'.__($zerif_testimonials_subtitle,'zerif-lite').'</h6>';
+    echo '<h6 class="black-text">'.esc_attr( $zerif_testimonials_subtitle ).'</h6>';
 
 
 endif;

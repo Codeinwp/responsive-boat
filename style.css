@@ -121,6 +121,18 @@ Header
     color: #fd0 !important;
 }
 
+.rb-site-title {
+    color: #FFDD00;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.rb-site-description {
+    color: #FFDD00;
+    font-size: 15px;
+    line-height: 15px;
+}
+
 /*--------------------------------------------------------------
 Content
 --------------------------------------------------------------*/

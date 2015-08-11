@@ -90,7 +90,7 @@ endif; ?>
 
                 <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
 
-                    <span class="sr-only"><?php _e('Toggle navigation','zerif-lite'); ?></span>
+                    <span class="sr-only"><?php _e('Toggle navigation','responsiveboat'); ?></span>
 
                     <span class="icon-bar"></span>
 
@@ -116,7 +116,7 @@ endif; ?>
 
                     endif;
 
-                        echo '<img src="'.$zerif_logo.'" alt="'.get_bloginfo('title').'" >';
+                        echo '<img src="'.esc_url( $zerif_logo ).'" alt="'.get_bloginfo('title').'" >';
 
                     echo '</a>';
 
@@ -132,15 +132,9 @@ endif; ?>
 
                     endif;
 
-                    if( file_exists(get_stylesheet_directory()."/images/logo.png")):
+                    echo "<h1 class='rb-site-title'>".get_bloginfo( 'name' )."</h1>";
 
-                        echo '<img src="'.get_stylesheet_directory_uri().'/images/logo.png" alt="'.get_bloginfo('title').'">';
-
-                    else:
-
-                        echo '<img src="'.get_template_directory_uri().'/images/logo.png" alt="'.get_bloginfo('title').'">';
-
-                    endif;
+                    echo "<h2 class='rb-site-description'>".get_bloginfo( 'description' )."</h2>";
 
                     echo '</a>';
 
