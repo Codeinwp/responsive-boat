@@ -4,7 +4,7 @@
  Author:       Themeisle
  Author URI:   https://themeisle.com
  Template:     zerif-lite
- Version:      1.0.2
+ Version:      1.0.3
  License:      GNU General Public License version 2
  License URI:  license.txt
  Text Domain:  responsiveboat
@@ -119,6 +119,18 @@ Header
 
 .navbar-inverse .navbar-nav > li > a:hover {
     color: #fd0 !important;
+}
+
+.rb-site-title {
+    color: #FFDD00;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.rb-site-description {
+    color: #FFDD00;
+    font-size: 15px;
+    line-height: 15px;
 }
 
 /*--------------------------------------------------------------

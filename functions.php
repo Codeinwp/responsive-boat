@@ -1,18 +1,18 @@
 <?php
 
-function responsive_boat_setup() {
+function responsiveboat_setup() {
 
 	add_image_size('rb_latest_news_photo', 480, 480, true);
 
 }
-add_action('after_setup_theme', 'responsive_boat_setup');
+add_action('after_setup_theme', 'responsiveboat_setup');
 
-function responsive_boat_customizer() {
+function responsiveboat_customizer() {
 
 	require get_stylesheet_directory() . '/inc/customizer.php';
 
 }
-add_action('init', 'responsive_boat_customizer');
+add_action('init', 'responsiveboat_customizer');
 
 add_action( 'wp_enqueue_scripts', 'responsiveboat_enqueue_styles' );
 function responsiveboat_enqueue_styles() {
@@ -48,7 +48,7 @@ function responsiveboat_remove_style_child(){
 add_action( 'wp_enqueue_scripts', 'responsiveboat_remove_style_child', 100 );
 
 /* get first image from a post content or get a default image */
-function responsive_boat_get_first_image_from_post() {
+function responsiveboat_get_first_image_from_post() {
 
 	global $post, $posts;
 

@@ -13,7 +13,7 @@
             $rb_aboutyou_title = get_theme_mod('rb_aboutyou_title',__('About you','responsiveboat'));
 
             if( !empty($rb_aboutyou_title) ):
-                echo '<h2 class="white-text">'.$rb_aboutyou_title.'</h2>';
+                echo '<h2 class="white-text">'.esc_attr( $rb_aboutyou_title ).'</h2>';
             endif;
             ?>
 
@@ -31,7 +31,7 @@
                 echo '<h6 class="white-text">';
 
 
-                    echo __($rb_aboutyou_subtitle,'responsiveboat');
+                    echo esc_attr( $rb_aboutyou_subtitle );
 
 
                 echo '</h6>';
@@ -66,7 +66,22 @@
                 echo '<p>';
 
 
-                echo __($rb_aboutyou_text,'responsiveboat');
+                    echo wp_kses( $rb_aboutyou_text, array(
+                        'a' => array(
+                            'href' => array(),
+                            'title' => array()
+                        ),
+                        'br' => array(),
+                        'em' => array(),
+                        'strong' => array(),
+                        'h1' => array(),
+                        'h2' => array(),
+                        'h3' => array(),
+                        'h4' => array(),
+                        'h5' => array(),
+                        'h6' => array(),
+                        'p' => array()
+                    ) );
 
 
                 echo '</p>';
@@ -83,7 +98,7 @@
 
                 echo '<div class="col-lg-6 col-md-6 column" data-scrollreveal="enter bottom after 0s over 1s">';
 
-                    echo '<img src="'.$rb_aboutyou_image.'">';
+                    echo '<img src="'.esc_url( $rb_aboutyou_image ).'">';
 
                 echo '</div>';
 
