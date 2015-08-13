@@ -464,7 +464,7 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 							<?php
 							$zerif_contactus_button_label = get_theme_mod('zerif_contactus_button_label','Send Message');
 							if( !empty($zerif_contactus_button_label) ):
-								echo '<button class="btn btn-primary custom-button red-btn" type="submit" data-scrollreveal="enter left after 0s over 1s">'.$zerif_contactus_button_label.'</button>';
+								echo '<button class="btn btn-primary custom-button red-btn" type="submit" data-scrollreveal="enter left after 0s over 1s">'.esc_attr($zerif_contactus_button_label).'</button>';
 							endif;
 							?>
 
@@ -486,7 +486,7 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 
 							if( isset($zerif_contactus_recaptcha_show) && $zerif_contactus_recaptcha_show != 1 && !empty($zerif_contactus_sitekey) && !empty($zerif_contactus_secretkey) ) :
 
-								echo '<div class="g-recaptcha" data-sitekey="' . $zerif_contactus_sitekey . '"></div>';
+								echo '<div class="g-recaptcha" data-sitekey="' . esc_attr($zerif_contactus_sitekey) . '"></div>';
 
 							endif;
 
