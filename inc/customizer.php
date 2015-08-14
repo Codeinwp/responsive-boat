@@ -19,6 +19,7 @@ function responsiveboat_customize_register( $wp_customize ) {
     $wp_customize->remove_section('zerif_aboutus_feat3_section');
     $wp_customize->remove_section('zerif_aboutus_feat4_section');
     $wp_customize->remove_section('zerif_aboutus_clients_section');
+	$wp_customize->remove_section('zerif_contactus_section');
 
     /**************************************/
     /********** Big title image **********/
