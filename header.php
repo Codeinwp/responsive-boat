@@ -108,11 +108,11 @@ endif; ?>
 
                     if( is_front_page() ):
 
-                        echo '<a href="'.esc_url( home_url( '/' ) ).'" class="rb-navbar-brand rb-hidden-logo">';
+                        echo '<a href="'.esc_url( home_url( '/' ) ).'" class="navbar-brand rb-hidden-logo">';
 
                     else:
 
-                        echo '<a href="'.esc_url( home_url( '/' ) ).'" class="rb-navbar-brand">';
+                        echo '<a href="'.esc_url( home_url( '/' ) ).'" class="navbar-brand">';
 
                     endif;
 
@@ -124,11 +124,11 @@ endif; ?>
 
                     if( is_front_page() ):
 
-                        echo '<a href="'.esc_url( home_url( '/' ) ).'" class="rb-navbar-brand rb-hidden-logo">';
+                        echo '<a href="'.esc_url( home_url( '/' ) ).'" class="navbar-brand rb-hidden-logo">';
 
                     else:
 
-                        echo '<a href="'.esc_url( home_url( '/' ) ).'" class="rb-navbar-brand">';
+                        echo '<a href="'.esc_url( home_url( '/' ) ).'" class="navbar-brand">';
 
                     endif;
 

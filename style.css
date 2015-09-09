@@ -4,7 +4,7 @@
  Author:       Themeisle
  Author URI:   https://themeisle.com
  Template:     zerif-lite
- Version:      1.0.5
+ Version:      1.0.6
  License:      GNU General Public License version 2
  License URI:  license.txt
  Text Domain:  responsiveboat
@@ -69,70 +69,39 @@ Header
 --------------------------------------------------------------*/
 
 .navbar {
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.8)), color-stop(50%, rgba(0,0,0,0.5)), to(rgba(0,0,0,0)));
-    background: -webkit-linear-gradient(top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0) 100%);
-    background: linear-gradient(to bottom,rgba(0,0,0,0.8)0%,rgba(0,0,0,0.5) 50%,rgba(0,0,0,0) 100%);
+	background: rgba(0,0,0,0.2);
 }
-
 .navbar-black {
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.8)), color-stop(50%, rgba(0,0,0,0.5)), to(rgba(0,0,0,0)));
-    background: -webkit-linear-gradient(top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0) 100%);
-    background: linear-gradient(to bottom,rgba(0,0,0,0.8)0%,rgba(0,0,0,0.7) 50%,rgba(0,0,0,0.5) 100%);
+	background: rgba(0,0,0,0.8);
 }
-
-#site-navigation {
-    width: 100%;
+ul.nav > li.current_page_item > a:before {
+	 background:#FD0;
 }
-
-.navbar-inverse .navbar-nav {
-    padding-top: 16px;
-}
-
-.navbar-inverse .navbar-nav >li {
-    float: none;
-    display:inline-block;
-}
-
 .navbar-inverse .navbar-nav > li > a {
     font-size: 12px;
     font-family: "Montserrat", "sans-serif";
     text-transform: uppercase;
     color: #fff;
 }
-
-.rb_logo {
-    padding-bottom: 190px;
-}
-
-.header.header > .navbar {
-    box-shadow: none;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-}
-
-.header-content-wrap {
-    background: rgba(0, 0, 0, 0.6) none repeat scroll 0% 0%;
-    position: relative;
-    box-shadow: 0px 5px 11px 0px rgba(50, 50, 50, 0.08);
-    padding: 10% 0px 290px;
-}
-
 .navbar-inverse .navbar-nav > li > a:hover {
     color: #fd0 !important;
 }
-
 .rb-site-title {
     color: #FFDD00;
     font-size: 20px;
     line-height: 20px;
 }
-
 .rb-site-description {
     color: #FFDD00;
     font-size: 15px;
     line-height: 15px;
 }
-
+.rb_logo {
+    padding-bottom: 190px;
+}
+.header-content-wrap {
+	padding: 10% 0px 290px;
+}
 /*--------------------------------------------------------------
 Content
 --------------------------------------------------------------*/
@@ -220,10 +189,6 @@ article.hentry {
     margin-top: 0;
 }
 
-#primary{
-    margin-top: -60px;
-}
-
 .listpost-content-wrap .entry-content p {
     min-height: 90px;
     margin-bottom: 0px;
@@ -251,7 +216,7 @@ article.hentry {
 }
 
 #client-feedbacks .feedback-box {
-    background: #000;
+    background: #404040;
     -webkit-border-radius: 0px;
     -moz-border-radius: 0px;
     border-radius: 0px;
@@ -472,33 +437,28 @@ Footer
     width: 100%;
     text-align: center;
 }
-
-.rb-hidden-logo {
-    display: none !important;
-}
-
 .contact-us .g-recaptcha, .contact-us .zerif-g-recaptcha {
     float: right;
     padding-right: 15px;
 }
-
-.rb-navbar-brand {
-    padding-top: 10px;
-}
-
-.navbar-black .navbar-inverse .navbar-nav {
-    padding-top: 0px;
-}
-
 .navbar-toggle.active {
     background-color: #FD0 !important;
 }
-
 .navbar-inverse .navbar-toggle.active .icon-bar {
     background-color: #000 !important;
 }
-.rb-fixed {
-    margin-top: 32px;
+.entry-title:before, .widget .widget-title:before {
+	background: #FD0;
+}
+.comment-form #submit, .comment-reply-link {
+	background: #313131;
+    border:1px solid #FFDD00 !important;
+    color: #fff !important; 
+}
+.comment-form #submit:hover, .comment-reply-link:hover {
+	background: #FFDD00;
+    border:1px solid #FFDD00 !important;
+    color: #000 !important; 
 }
 
 /*--------------------------------------------------------------
