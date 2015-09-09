@@ -500,7 +500,19 @@ Footer
 .rb-fixed {
     margin-top: 32px;
 }
-
+.entry-title:before, .widget .widget-title:before {
+	background: #FD0;
+}
+.comment-form #submit, .comment-reply-link {
+	background: #313131;
+    border:1px solid #FFDD00 !important;
+    color: #fff !important; 
+}
+.comment-form #submit:hover, .comment-reply-link:hover {
+	background: #FFDD00;
+    border:1px solid #FFDD00 !important;
+    color: #000 !important; 
+}
 /*--------------------------------------------------------------
 Responsive
 --------------------------------------------------------------*/
