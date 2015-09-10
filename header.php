@@ -79,9 +79,9 @@ endif; ?>
 <header id="home" class="header">
 
     <?php if(is_front_page()): ?>
-        <div id="main-nav" class="navbar navbar-inverse bs-docs-nav" role="banner">
+        <div id="main-nav" class="navbar navbar-inverse bs-docs-nav navbar-black" role="banner">
     <?php else: ?>
-        <div id="main-nav" class="navbar-black navbar-inverse bs-docs-nav" role="banner">
+        <div id="main-nav" class="navbar navbar-inverse bs-docs-nav" role="banner">
     <?php endif; ?>
 
         <div class="container">
