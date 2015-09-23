@@ -45,7 +45,12 @@ if( !empty($zerif_total_posts) && ($zerif_total_posts > 0) ):
 
             while ( $zerif_latest_loop->have_posts() ) : $zerif_latest_loop->the_post();
 
-            echo '<div class="rb-latest-news">';
+
+            if ( has_post_thumbnail() ) :
+                echo '<div class="rb-latest-news">';
+            else:
+                echo '<div class="rb-latest-news rb-latest-news-content-open">';
+            endif;
 
                 echo '<div class="rb-latest-news-image-holder">';
 
