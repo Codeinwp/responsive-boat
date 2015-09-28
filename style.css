@@ -132,8 +132,8 @@ Content
 }
 
 .focus-box .service-icon {
-    width: 250px;
-    height: 250px;
+    width: 220px;
+    height: 220px;
     border-radius: 0;
 }
 
@@ -413,8 +413,8 @@ Responsive
         text-align: center;
     }
     .focus-box .service-icon {
-        width: 180px;
-        height: 180px;
+        width: 165px;
+        height: 165px;
     }
 
 }
@@ -428,6 +428,10 @@ Responsive
     }
     .navbar a{
         color: #fff !important;
+    }
+    .focus-box .service-icon {
+        width: 220px;
+        height: 220px;
     }
 }
 
