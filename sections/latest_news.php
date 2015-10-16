@@ -4,47 +4,45 @@ $zerif_total_posts = get_option('posts_per_page'); /* number of latest posts to 
 
 if( !empty($zerif_total_posts) && ($zerif_total_posts > 0) ):
 
+	if( function_exists('zerif_before_latest_news_trigger') ):
+		zerif_before_latest_news_trigger();
+	endif;	
+
     echo '<section class="latest-news" id="latestnews">';
+	
+		if( function_exists('zerif_top_latest_news_trigger') ):
+			zerif_top_latest_news_trigger();
+		endif;	
 
         /* SECTION HEADER */
 
         echo '<div class="section-header">';
 
-        $zerif_latestnews_title = get_theme_mod('zerif_latestnews_title');
+			$zerif_latestnews_title = get_theme_mod('zerif_latestnews_title');
 
-        /* title */
-        if( !empty($zerif_latestnews_title) ):
+			/* title */
+			if( !empty($zerif_latestnews_title) ):
+				echo '<h2 class="dark-text">' . $zerif_latestnews_title . '</h2>';
+			else:
+				echo '<h2 class="dark-text">' . __('Latest news','responsiveboat') . '</h2>';
+			endif;
 
-            echo '<h2 class="dark-text">' . $zerif_latestnews_title . '</h2>';
+			/* subtitle */
+			$zerif_latestnews_subtitle = get_theme_mod('zerif_latestnews_subtitle');
 
-        else:
-
-            echo '<h2 class="dark-text">' . __('Latest news','responsiveboat') . '</h2>';
-
-        endif;
-
-        /* subtitle */
-        $zerif_latestnews_subtitle = get_theme_mod('zerif_latestnews_subtitle');
-
-        if( !empty($zerif_latestnews_subtitle) ):
-
-            echo '<h6 class="dark-text">'.$zerif_latestnews_subtitle.'</h6>';
-
-        endif;
+			if( !empty($zerif_latestnews_subtitle) ):
+				echo '<h6 class="dark-text">'.$zerif_latestnews_subtitle.'</h6>';
+			endif;
 
         echo '</div><!-- END .section-header -->';
 
         echo '<div class="clear"></div>';
 
-
         $zerif_latest_loop = new WP_Query( array( 'post_type' => 'post', 'posts_per_page' => 4, 'order' => 'DESC','ignore_sticky_posts' => true ) );
-
-
 
         echo '<div class="rb-latest-news-container">';
 
             while ( $zerif_latest_loop->have_posts() ) : $zerif_latest_loop->the_post();
-
 
             if ( has_post_thumbnail() ) :
                 echo '<div class="rb-latest-news">';
@@ -66,8 +64,6 @@ if( !empty($zerif_total_posts) && ($zerif_total_posts > 0) ):
 
                         echo '</span>';
 
-
-
                     echo '</a>';
 
                 echo '<span class="rb-latest-news-content">';
@@ -87,9 +83,14 @@ if( !empty($zerif_total_posts) && ($zerif_total_posts > 0) ):
 
         echo '</div>';
 
-
-
+		if( function_exists('zerif_bottom_latest_news_trigger') ):
+			zerif_bottom_latest_news_trigger();
+		endif;
 
     echo '</section>';
+	
+	if( function_exists('zerif_after_latest_news_trigger') ):
+		zerif_after_latest_news_trigger();
+	endif;	
 
 endif; ?>
