@@ -4,7 +4,7 @@
  Author:       Themeisle
  Author URI:   https://themeisle.com
  Template:     zerif-lite
- Version:      1.0.8
+ Version:      1.0.9
  License:      GNU General Public License version 2
  License URI:  license.txt
  Text Domain:  responsiveboat
@@ -58,6 +58,10 @@ General
     color: #303030;
     font-weight: bold;
     text-transform: uppercase;
+}
+
+.section-header h6.white-text {
+	color: #ffffff;
 }
 
 p {
@@ -132,8 +136,8 @@ Content
 }
 
 .focus-box .service-icon {
-    width: 250px;
-    height: 250px;
+    width: 220px;
+    height: 220px;
     border-radius: 0;
 }
 
@@ -185,7 +189,7 @@ input[type="text"], input[type="email"], input[type="url"], input[type="password
     border-radius: 0;
 }
 
-.focus-box .red-border-bottom:before {
+.focus-box .red-border-bottom:before, .works .red-border-bottom:before, .listpost-content-wrap .entry-title a:after {
     background: #FD0 !important;
 }
 
@@ -413,8 +417,8 @@ Responsive
         text-align: center;
     }
     .focus-box .service-icon {
-        width: 180px;
-        height: 180px;
+        width: 165px;
+        height: 165px;
     }
 
 }
@@ -428,6 +432,10 @@ Responsive
     }
     .navbar a{
         color: #fff !important;
+    }
+    .focus-box .service-icon {
+        width: 220px;
+        height: 220px;
     }
 }
 
