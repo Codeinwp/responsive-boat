@@ -4,7 +4,7 @@
  Author:       Themeisle
  Author URI:   https://themeisle.com
  Template:     zerif-lite
- Version:      1.0.9
+ Version:      1.1.1
  License:      GNU General Public License version 2
  License URI:  license.txt
  Text Domain:  responsiveboat
@@ -98,7 +98,7 @@ ul.nav > li.current_page_item > a:before {
 .rb-site-description {
     color: #FFDD00;
     font-size: 15px;
-    line-height: 15px;
+    line-height: 10px;
 }
 .rb_logo {
     padding-bottom: 190px;
@@ -445,4 +445,9 @@ Responsive
         height: auto !important;
     }
 
+}
+@media screen and  (max-width: 480px) {
+    .rb-site-description {
+        font-size: 3.5vw !important;
+    }
 }

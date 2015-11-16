@@ -21,7 +21,6 @@
 
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><?php wp_title( '|', true, 'right' ); ?></title>
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	
@@ -36,8 +35,18 @@
     <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/html5.js"></script>
     <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/ie.css" type="text/css">
     <![endif]-->
+	
+	<?php
+	if ( ! function_exists( '_wp_render_title_tag' ) ) :
+		function responsiveboat_old_render_title() {
+		?>
+		<title><?php wp_title( '-', true, 'right' ); ?></title>
+		<?php
+		}
+		add_action( 'wp_head', 'responsiveboat_old_render_title' );
+	endif;
 
-    <?php wp_head(); ?>
+    wp_head(); ?>
 	
 	<?php 
 	if( function_exists('zerif_bottom_head_trigger') ):
