@@ -1,10 +1,11 @@
 /*
  Theme Name:   ResponsiveBoat
+ Theme URI:    http://themeisle.com/themes/responsiveboat-theme/
  Description:  ResponsiveBoat is a free responsive WordPress theme, with a friendly and colorful design. It comes with a full-screen layout, a full-width homepage header, elegant parallax effect, and nice animations. It can be used web agencies, digital studios, corporate, product showcase, personal and business portfolio. Overall, ResponsiveBoat looks very modern and interactive.
  Author:       Themeisle
  Author URI:   https://themeisle.com
  Template:     zerif-lite
- Version:      1.1.1
+ Version:      1.1.2
  License:      GNU General Public License version 2
  License URI:  license.txt
  Text Domain:  responsiveboat
@@ -399,6 +400,10 @@ pre {
     font-size: 15px;
 }
 
+.large-container .entry-content p {
+    margin: 4px 0px 0px 0px;
+}
+
 /*--------------------------------------------------------------
 Responsive
 --------------------------------------------------------------*/
@@ -437,6 +442,22 @@ Responsive
         width: 220px;
         height: 220px;
     }
+
+    .listpost-content-wrap-large {
+        position: relative;
+        float: left;
+    }
+
+    .large-container .list-post-top {
+        float: left;
+    }
+
+    .listpost-content-wrap-large:after {
+        content: "";
+        width: 100%;
+        clear: both;
+    }
+
 }
 
 @media screen and (max-width: 600px){
@@ -450,4 +471,5 @@ Responsive
     .rb-site-description {
         font-size: 3.5vw !important;
     }
+
 }
