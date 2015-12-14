@@ -399,6 +399,10 @@ pre {
     font-size: 15px;
 }
 
+.large-container .entry-content p {
+    margin: 4px 0px 0px 0px;
+}
+
 /*--------------------------------------------------------------
 Responsive
 --------------------------------------------------------------*/
@@ -437,6 +441,22 @@ Responsive
         width: 220px;
         height: 220px;
     }
+
+    .listpost-content-wrap-large {
+        position: relative;
+        float: left;
+    }
+
+    .large-container .list-post-top {
+        float: left;
+    }
+
+    .listpost-content-wrap-large:after {
+        content: "";
+        width: 100%;
+        clear: both;
+    }
+
 }
 
 @media screen and (max-width: 600px){
@@ -450,4 +470,5 @@ Responsive
     .rb-site-description {
         font-size: 3.5vw !important;
     }
+
 }
