@@ -5,7 +5,7 @@
  Author:       Themeisle
  Author URI:   https://themeisle.com
  Template:     zerif-lite
- Version:      1.1.2
+ Version:      1.1.3
  License:      GNU General Public License version 2
  License URI:  license.txt
  Text Domain:  responsiveboat
@@ -76,9 +76,6 @@ Header
 .navbar {
 	background: rgba(0,0,0,0.8);
 }
-.navbar.navbar-black {
-	background: rgba(0,0,0,0.2);
-}
 ul.nav > li.current_page_item > a:before {
 	 background:#FD0;
 }
@@ -113,20 +110,26 @@ ul.nav > li.current_page_item > a:before {
 .navbar-inverse .navbar-toggle.active .icon-bar {
     background-color: #000 !important;
 }
-.rb-hidden-logo {
-	display:none;
+.navbar-black-init {
+    background: rgba(0,0,0,0.2);
 }
-.navbar-black nav{
-	width: 100%;
+
+.navbar-black-init .rb-hidden-logo {
+    display:none;
 }
-.navbar-black nav ul.nav {
-	width: 100%;
-	text-align: center;
+.navbar-black-init nav {
+    width: 100%;
 }
-.navbar-black nav ul.nav li {
-	float: none;
-	display: inline-block;
+.navbar-black-init nav ul.nav {
+    width: 100%;
+    text-align: center;
 }
+.navbar-black-init nav ul.nav li {
+    float: none;
+    display: inline-block;
+}
+
+
 /*--------------------------------------------------------------
 Content
 --------------------------------------------------------------*/
