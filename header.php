@@ -200,67 +200,148 @@ endif; ?>
 
 			<?php if(is_front_page()): ?>
 				<div id="main-nav" class="navbar navbar-inverse bs-docs-nav navbar-black" role="banner">
+					<div class="container">
+						<div class="navbar-header responsive-logo">
+							<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+
+							<?php
+								$zerif_logo = get_theme_mod('zerif_logo');
+								if(isset($zerif_logo) && $zerif_logo != ""):
+									if( is_front_page() ):
+										echo '<a href="'.esc_url( home_url( '/' ) ).'" class="navbar-brand rb-hidden-logo">';
+									else:
+										echo '<a href="'.esc_url( home_url( '/' ) ).'" class="navbar-brand">';
+									endif;
+										echo '<img src="'.esc_url( $zerif_logo ).'" alt="'.get_bloginfo('title').'" >';
+									echo '</a>';
+								else:
+									if( is_front_page() ):
+										echo '<a href="'.esc_url( home_url( '/' ) ).'" class="navbar-brand rb-hidden-logo">';
+									else:
+										echo '<a href="'.esc_url( home_url( '/' ) ).'" class="navbar-brand">';
+									endif;
+										echo "<h1 class='rb-site-title'>".get_bloginfo( 'name' )."</h1>";
+										echo "<h2 class='rb-site-description'>".get_bloginfo( 'description' )."</h2>";
+									echo '</a>';
+								endif;
+							?>
+
+						</div>
+						<nav class="navbar-collapse bs-navbar-collapse collapse" role="navigation" id="site-navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+							<?php wp_nav_menu( array('theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav navbar-nav navbar-right responsive-nav main-nav-list' ,'fallback_cb'     => 'zerif_wp_page_menu')); ?>
+						</nav>
+					</div>
+				</div>
+				
+				<div id="main-nav" class="navbar navbar-inverse bs-docs-nav navbar-black-init" role="banner">
+					<div class="container">
+						<div class="navbar-header responsive-logo">
+							<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+
+							<?php
+								$zerif_logo = get_theme_mod('zerif_logo');
+								if(isset($zerif_logo) && $zerif_logo != ""):
+									if( is_front_page() ):
+										echo '<a href="'.esc_url( home_url( '/' ) ).'" class="navbar-brand rb-hidden-logo">';
+									else:
+										echo '<a href="'.esc_url( home_url( '/' ) ).'" class="navbar-brand">';
+									endif;
+										echo '<img src="'.esc_url( $zerif_logo ).'" alt="'.get_bloginfo('title').'" >';
+									echo '</a>';
+								else:
+									if( is_front_page() ):
+										echo '<a href="'.esc_url( home_url( '/' ) ).'" class="navbar-brand rb-hidden-logo">';
+									else:
+										echo '<a href="'.esc_url( home_url( '/' ) ).'" class="navbar-brand">';
+									endif;
+										echo "<h1 class='rb-site-title'>".get_bloginfo( 'name' )."</h1>";
+										echo "<h2 class='rb-site-description'>".get_bloginfo( 'description' )."</h2>";
+									echo '</a>';
+								endif;
+							?>
+
+						</div>
+						<nav class="navbar-collapse bs-navbar-collapse collapse" role="navigation" id="site-navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+							<?php wp_nav_menu( array('theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav navbar-nav navbar-right responsive-nav main-nav-list' ,'fallback_cb'     => 'zerif_wp_page_menu')); ?>
+						</nav>
+					</div>
+				</div>
+
+
+
 			<?php else: ?>
+
 				<div id="main-nav" class="navbar navbar-inverse bs-docs-nav" role="banner">
-			<?php endif; ?>
+					<div class="container">
 
-				<div class="container">
+						<div class="navbar-header responsive-logo">
 
-					<div class="navbar-header responsive-logo">
+							<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
 
-						<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+							<span class="sr-only">Toggle navigation</span>
 
-						<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
 
-						<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
 
-						<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
 
-						<span class="icon-bar"></span>
+							</button>
 
-						</button>
+							<?php
 
-						<?php
+								$zerif_logo = get_theme_mod('zerif_logo');
 
-							$zerif_logo = get_theme_mod('zerif_logo');
+								if(isset($zerif_logo) && $zerif_logo != ""):
 
-							if(isset($zerif_logo) && $zerif_logo != ""):
+									if( is_front_page() ):
+										echo '<a href="'.esc_url( home_url( '/' ) ).'" class="navbar-brand rb-hidden-logo">';
+									else:
+										echo '<a href="'.esc_url( home_url( '/' ) ).'" class="navbar-brand">';
+									endif;
 
-								if( is_front_page() ):
-									echo '<a href="'.esc_url( home_url( '/' ) ).'" class="navbar-brand rb-hidden-logo">';
+										echo '<img src="'.esc_url( $zerif_logo ).'" alt="'.get_bloginfo('title').'" >';
+
+									echo '</a>';
+
 								else:
-									echo '<a href="'.esc_url( home_url( '/' ) ).'" class="navbar-brand">';
+
+									if( is_front_page() ):
+										echo '<a href="'.esc_url( home_url( '/' ) ).'" class="navbar-brand rb-hidden-logo">';
+									else:
+										echo '<a href="'.esc_url( home_url( '/' ) ).'" class="navbar-brand">';
+									endif;
+
+										echo "<h1 class='rb-site-title'>".get_bloginfo( 'name' )."</h1>";
+
+										echo "<h2 class='rb-site-description'>".get_bloginfo( 'description' )."</h2>";
+
+									echo '</a>';
+
 								endif;
 
-									echo '<img src="'.esc_url( $zerif_logo ).'" alt="'.get_bloginfo('title').'" >';
+							?>
 
-								echo '</a>';
+						</div>
 
-							else:
-
-								if( is_front_page() ):
-									echo '<a href="'.esc_url( home_url( '/' ) ).'" class="navbar-brand rb-hidden-logo">';
-								else:
-									echo '<a href="'.esc_url( home_url( '/' ) ).'" class="navbar-brand">';
-								endif;
-
-									echo "<h1 class='rb-site-title'>".get_bloginfo( 'name' )."</h1>";
-
-									echo "<h2 class='rb-site-description'>".get_bloginfo( 'description' )."</h2>";
-
-								echo '</a>';
-
-							endif;
-
-						?>
+						<nav class="navbar-collapse bs-navbar-collapse collapse" role="navigation" id="site-navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+							<?php wp_nav_menu( array('theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav navbar-nav navbar-right responsive-nav main-nav-list' ,'fallback_cb'     => 'zerif_wp_page_menu')); ?>
+						</nav>
 
 					</div>
 
-					<nav class="navbar-collapse bs-navbar-collapse collapse" role="navigation" id="site-navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement" role="navigation">
-						<?php wp_nav_menu( array('theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav navbar-nav navbar-right responsive-nav main-nav-list' ,'fallback_cb'     => 'zerif_wp_page_menu')); ?>
-					</nav>
-
 				</div>
 
-			</div>
+
+			<?php endif; ?>
 			<!-- / END TOP BAR -->
