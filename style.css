@@ -428,6 +428,10 @@ Responsive
         width: 165px;
         height: 165px;
     }
+    .about-us .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
 
 }
 
