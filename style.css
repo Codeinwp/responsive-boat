@@ -5,7 +5,7 @@
  Author:       Themeisle
  Author URI:   https://themeisle.com
  Template:     zerif-lite
- Version:      1.1.3
+ Version:      1.1.4
  License:      GNU General Public License version 2
  License URI:  license.txt
  Text Domain:  responsiveboat
@@ -427,6 +427,10 @@ Responsive
     .focus-box .service-icon {
         width: 165px;
         height: 165px;
+    }
+    .about-us .row {
+        margin-left: 0;
+        margin-right: 0;
     }
 
 }
