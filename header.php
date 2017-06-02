@@ -210,8 +210,14 @@ endif; ?>
 							</button>
 
 							<?php
-								$zerif_logo = get_theme_mod('zerif_logo');
-								if(isset($zerif_logo) && $zerif_logo != ""):
+								$rb_custom_logo_id = get_theme_mod( 'custom_logo' );
+								if( !empty($rb_custom_logo_id) ) {
+									$rb_custom_logo = wp_get_attachment_image_src( $rb_custom_logo_id, 'full' );
+									if ( ! empty( $rb_custom_logo[0] ) ) {
+										$zerif_logo = $rb_custom_logo[0];
+									}
+								}
+								if( ! empty( $zerif_logo ) ):
 									if( is_front_page() ):
 										echo '<a href="'.esc_url( home_url( '/' ) ).'" class="navbar-brand rb-hidden-logo">';
 									else:
@@ -249,8 +255,14 @@ endif; ?>
 							</button>
 
 							<?php
-								$zerif_logo = get_theme_mod('zerif_logo');
-								if(isset($zerif_logo) && $zerif_logo != ""):
+								$rb_custom_logo_id = get_theme_mod( 'custom_logo' );
+								if( !empty($rb_custom_logo_id) ) {
+									$rb_custom_logo = wp_get_attachment_image_src( $rb_custom_logo_id, 'full' );
+									if ( ! empty( $rb_custom_logo[0] ) ) {
+										$zerif_logo = $rb_custom_logo[0];
+									}
+								}
+								if( empty( $zerif_logo ) ):
 									if( is_front_page() ):
 										echo '<a href="'.esc_url( home_url( '/' ) ).'" class="navbar-brand rb-hidden-logo">';
 									else:
@@ -300,9 +312,15 @@ endif; ?>
 
 							<?php
 
-								$zerif_logo = get_theme_mod('zerif_logo');
+								$rb_custom_logo_id = get_theme_mod( 'custom_logo' );
+								if( !empty($rb_custom_logo_id) ) {
+									$rb_custom_logo = wp_get_attachment_image_src( $rb_custom_logo_id, 'full' );
+									if ( ! empty( $rb_custom_logo[0] ) ) {
+										$zerif_logo = $rb_custom_logo[0];
+									}
+								}
 
-								if(isset($zerif_logo) && $zerif_logo != ""):
+								if( empty( $zerif_logo ) ):
 
 									if( is_front_page() ):
 										echo '<a href="'.esc_url( home_url( '/' ) ).'" class="navbar-brand rb-hidden-logo">';
