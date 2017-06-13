@@ -253,6 +253,10 @@ article.hentry {
     color: #fff;
 }
 
+.our-clients, .our-clients .section-footer-title {
+    background: none;
+}
+
 /*--------------------------------------------------------------
 Footer
 --------------------------------------------------------------*/
