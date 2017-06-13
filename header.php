@@ -262,7 +262,7 @@ endif; ?>
 										$zerif_logo = $rb_custom_logo[0];
 									}
 								}
-								if( empty( $zerif_logo ) ):
+								if( ! empty( $zerif_logo ) ):
 									if( is_front_page() ):
 										echo '<a href="'.esc_url( home_url( '/' ) ).'" class="navbar-brand rb-hidden-logo">';
 									else:

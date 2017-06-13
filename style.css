@@ -16,19 +16,19 @@
 /*--------------------------------------------------------------
 General
 --------------------------------------------------------------*/
-.green-btn, .red-btn {
+.custom-button.green-btn, .custom-button.red-btn {
 	background: rgba(255, 255, 255, 0.15);
-	border: 1px solid #FFDD00 !important;
+	border: 1px solid #FFDD00;
 }
 
-.green-btn:hover, .red-btn:hover {
+.custom-button.green-btn:hover, .custom-button.red-btn:hover {
 	background: #FFDD00;
-    border: 1px solid #FFDD00 !important;
-    color: #303030 !important;
+    border: 1px solid #FFDD00;
+    color: #303030;
 }
 
 .custom-button {
-    display: inline-block !important;
+    display: inline-block;
     text-align: center;
     text-transform: uppercase;
     padding: 13px 35px;
@@ -135,7 +135,7 @@ Content
 --------------------------------------------------------------*/
 
 .about-us {
-    background: rgba(45, 45, 45, 0.95) none repeat scroll 0% 0% !important;
+    background: rgba(45, 45, 45, 0.95) none repeat scroll 0% 0%;
     padding-bottom: 0px;
 }
 
@@ -146,7 +146,7 @@ Content
 }
 
 .testimonial {
-    background: rgba(255, 221, 0, 0.7) none repeat scroll 0% 0% !important;
+    background: rgba(255, 221, 0, 0.7) none repeat scroll 0% 0%;
 }
 
 .contact-us {
@@ -159,13 +159,9 @@ Content
     height: 255px;
 }
 
-.team-member h5:before {
-    background: #FD0 !important;
-}
-
 .team-member:hover .details {
     top: 0px;
-    background: #FD0 none repeat scroll 0% 0% !important;
+    background: #FD0 none repeat scroll 0% 0%;
     color: #000;
     opacity: 0.8;
     min-height: 255px;
@@ -198,7 +194,7 @@ input[type="text"], input[type="email"], input[type="url"], input[type="password
 }
 
 .focus-box p {
-	color: #6E6E6E !important;
+	color: #6E6E6E;
     font-family: "Oxygen", sans-serif !important;
 }
 
