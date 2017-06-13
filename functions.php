@@ -159,3 +159,85 @@ function responsiveboat_get_first_image_from_post() {
 	return $zerif_first_img;
 
 }
+
+/**
+ * Notice in Customize to announce the theme is not maintained anymore
+ */
+function responsive_boat_customize_register( $wp_customize ) {
+
+	require_once get_stylesheet_directory() . '/class-ti-notify.php';
+
+	$wp_customize->register_section_type( 'Ti_Notify' );
+
+	$wp_customize->add_section(
+		new Ti_Notify(
+			$wp_customize,
+			'ti-notify',
+			array(
+				'text'     => sprintf( __( 'This child theme is not maintained anymore, consider using the parent theme %1$s or check-out our latest free one-page theme: %2$s.','responsiveboat' ), sprintf( '<a href="' . admin_url( 'theme-install.php?theme=zerif-lite' ) . '">%s</a>', 'Zerif Lite' ), sprintf( '<a href="' . admin_url( 'theme-install.php?theme=hestia' ) . '">%s</a>', 'Hestia' ) ),
+				'priority' => 0,
+			)
+		)
+	);
+
+	$wp_customize->add_setting( 'responsive-boat-notify', array(
+	        'sanitize_callback' => 'esc_html',
+    ) );
+
+	$wp_customize->add_control( 'responsive-boat-notify', array(
+		'label'    => __( 'Notification', 'responsiveboat' ),
+		'section'  => 'ti-notify',
+		'priority' => 1,
+	) );
+}
+
+add_action( 'customize_register', 'responsive_boat_customize_register' );
+
+/**
+ * Notice in admin dashboard to announce the theme is not maintained anymore
+ */
+function responsive_boat_admin_notice() {
+
+	global $pagenow;
+
+	if ( is_admin() && ( 'themes.php' == $pagenow ) && isset( $_GET['activated'] ) ) {
+		echo '<div class="updated notice is-dismissible"><p>';
+		printf( __( 'This child theme is not maintained anymore, consider using the parent theme %1$s or check-out our latest free one-page theme: %2$s.','responsiveboat' ), sprintf( '<a href="' . admin_url( 'theme-install.php?theme=zerif-lite' ) . '">%s</a>', 'Zerif Lite' ), sprintf( '<a href="' . admin_url( 'theme-install.php?theme=hestia' ) . '">%s</a>', 'Hestia' ) );
+		echo '</p></div>';
+	}
+}
+
+add_action( 'admin_notices', 'responsive_boat_admin_notice', 99 );
+
+function responsiveboat_background_fix(){
+	return array(
+		'default-image' => get_stylesheet_directory_uri().'/images/bg.jpg',
+		'default-repeat'         => 'no-repeat',
+		'default-position-x'     => 'center',
+		'default-attachment'     => 'fixed'
+	);
+}
+add_filter('wp_themeisle_custom_background_args','responsiveboat_background_fix');
+function responsiveboat_setup_fix() {
+
+	register_default_headers( array(
+		'wheel' => array(
+			'url'           => get_stylesheet_directory_uri().'/images/bg.jpg',
+			'thumbnail_url' => get_stylesheet_directory_uri().'/images/bg.jpg',
+			'description'   => __( 'Header', 'responsiveboat' )
+		)
+	) );
+}
+add_action('after_setup_theme', 'responsiveboat_setup_fix');
+function responsive_boat_style_fix() {
+
+	$custom_css = "
+                .testimonial .section-header .white-text{
+                        color: #404040;
+                }
+                .big-title-container .btn.red-btn, .big-title-container .btn.green-btn {
+                    background: rgba(255, 255, 255, 0.15);
+                }";
+	wp_add_inline_style( 'responsiveboat-style', $custom_css );
+}
+add_action( 'wp_enqueue_scripts', 'responsive_boat_style_fix' );

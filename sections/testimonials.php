@@ -147,15 +147,15 @@ else:
 
 					echo '<div id="client-feedbacks" class="owl-carousel owl-theme">';
 
-						if(is_active_sidebar( 'sidebar-testimonials' )):
+						if(is_active_sidebar( 'sidebar-testimonials' )) {
 							dynamic_sidebar( 'sidebar-testimonials' );
-						else:
-
-							the_widget( 'zerif_testimonial_widget','title=Dana Lorem&text=Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur nec sem vel sapien venenatis mattis non vitae augue. Nullam congue commodo lorem vitae facilisis. Suspendisse malesuada id turpis interdum dictum.&image_uri='.get_stylesheet_directory_uri().'/images/testimonial1.jpg' );
-							the_widget( 'zerif_testimonial_widget','title=Linda Guthrie&text=Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur nec sem vel sapien venenatis mattis non vitae augue. Nullam congue commodo lorem vitae facilisis. Suspendisse malesuada id turpis interdum dictum.&image_uri='.get_stylesheet_directory_uri().'/images/testimonial2.jpg' );
-							the_widget( 'zerif_testimonial_widget','title=Cynthia Henry&text=Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur nec sem vel sapien venenatis mattis non vitae augue. Nullam congue commodo lorem vitae facilisis. Suspendisse malesuada id turpis interdum dictum.&image_uri='.get_stylesheet_directory_uri().'/images/testimonial3.jpg' );
-
-						endif;
+						} elseif ( current_user_can( 'edit_theme_options' ) ) {
+							if ( is_customize_preview() ) {
+								printf( __( 'Add widgets in this area by going to the %s','responsiveboat' ), __( 'Testimonials section','responsiveboat' ) );
+							} else {
+								printf( __( 'Add widgets in this area by going to the %s','responsiveboat' ), sprintf( '<a href="%1$s" class="zerif-default-links">%2$s</a>', esc_url( admin_url( 'customize.php?autofocus&#91;section&#93;=sidebar-widgets-sidebar-testimonials' ) ), __( 'Testimonials section','responsiveboat' ) ) );
+							}
+						}
 
 					echo '</div><!-- #client-feedbacks -->';
 
