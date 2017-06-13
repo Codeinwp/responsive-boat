@@ -76,7 +76,7 @@ else {
 
 				if(trim($_POST['myname']) === ''):               
 
-					$nameError = __('* Please enter your name.','zerif');               
+					$nameError = __('* Please enter your name.','responsiveboat');
 
 					$hasError = true;        
 
@@ -90,13 +90,13 @@ else {
 
 				if(trim($_POST['myemail']) === ''):               
 
-					$emailError = __('* Please enter your email address.','zerif');               
+					$emailError = __('* Please enter your email address.','responsiveboat');
 
 					$hasError = true;        
 
 				elseif (!preg_match("/^[[:alnum:]][a-z0-9_.-]*@[a-z0-9.-]+\.[a-z]{2,4}$/i", trim($_POST['myemail']))) :               
 
-					$emailError = __('* You entered an invalid email address.','zerif');               
+					$emailError = __('* You entered an invalid email address.','responsiveboat');
 
 					$hasError = true;        
 
@@ -110,7 +110,7 @@ else {
 
 				if(trim($_POST['mysubject']) === ''):               
 
-					$subjectError = __('* Please enter a subject.','zerif');               
+					$subjectError = __('* Please enter a subject.','responsiveboat');
 
 					$hasError = true;        
 
@@ -124,7 +124,7 @@ else {
 
 				if(trim($_POST['mymessage']) === ''):               
 
-					$messageError = __('* Please enter a message.','zerif');               
+					$messageError = __('* Please enter a message.','responsiveboat');
 
 					$hasError = true;        
 
@@ -380,10 +380,10 @@ else {
 
 											if(isset($emailSent) && $emailSent == true) :
 
-												echo '<p class="error white-text error_thanks">'.__('Thanks, your email was sent successfully!','zerif').'</p>';                            
+												echo '<p class="error white-text error_thanks">'.__('Thanks, your email was sent successfully!','responsiveboat').'</p>';
 											elseif(isset($_POST['submitted'])):                                    
 
-												echo '<p class="error white-text error_sorry">'.__('Sorry, an error occured. The email could not be sent.','zerif').'</p>';
+												echo '<p class="error white-text error_sorry">'.__('Sorry, an error occured. The email could not be sent.','responsiveboat').'</p>';
 
 											endif;
 

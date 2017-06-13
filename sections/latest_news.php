@@ -33,7 +33,7 @@ if( !empty($zerif_total_posts) && ($zerif_total_posts > 0) ):
 			/* SECTION HEADER */
 			echo '<div class="section-header">';
 			
-				$zerif_latestnews_title = get_theme_mod('zerif_latestnews_title',__('LATEST NEWS','zerif'));
+				$zerif_latestnews_title = get_theme_mod('zerif_latestnews_title',__('LATEST NEWS','responsiveboat'));
 				/* title */
 				if( !empty($zerif_latestnews_title) ):
 					echo '<h2 class="dark-text">' . $zerif_latestnews_title . '</h2>';
@@ -42,7 +42,7 @@ if( !empty($zerif_total_posts) && ($zerif_total_posts > 0) ):
 				endif;
 				
 				/* subtitle */
-				$zerif_latestnews_subtitle = get_theme_mod('zerif_latestnews_subtitle',__('Add a subtitle in Customizer, "Latest news section"','zerif'));
+				$zerif_latestnews_subtitle = get_theme_mod('zerif_latestnews_subtitle',__('Add a subtitle in Customizer, "Latest news section"','responsiveboat'));
 				if( !empty($zerif_latestnews_subtitle) ):
 					echo '<h6 class="dark-text">'.$zerif_latestnews_subtitle.'</h6>';
 				elseif ( isset( $wp_customize ) ):
